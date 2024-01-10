@@ -27,6 +27,7 @@ public class TutorService {
     public void atualizar(AtualizacaoTutorDto dto) {
         Tutor tutor = repository.getReferenceById(dto.id());
         tutor.atualizarDados(dto);
+        repository.save(tutor);
     }
 
 }
